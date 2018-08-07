@@ -13,4 +13,7 @@ public interface IStudentDao {
 	
 	public void removeUser(int sim);
 	
+	public String updateUser(Student sim);
+
+	
 }

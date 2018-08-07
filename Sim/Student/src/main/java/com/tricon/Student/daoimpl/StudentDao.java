@@ -70,4 +70,11 @@ public class StudentDao implements IStudentDao {
 		this.jdbcTemplate.execute("DELETE FROM student WHERE id =  " + sim);
 
 	}
+	@Override
+	public 	String updateUser(Student sim) {
+		
+		this.jdbcTemplate.execute("UPDATE `student`.`student` SET `name` = ' " + sim.getName() + "', `address` = ' " + sim.getAddress()+"' WHERE (`id` = '"+sim.getId()+ "')");
+		
+		return "Updated Successfully";
+	}
 }

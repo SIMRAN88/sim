@@ -39,4 +39,10 @@ public class StudentService implements IStudentService {
 		studentDao.removeUser(sim);
 	}
 
+	@Override
+	public String updateUser(Student sim) {
+		// TODO Auto-generated method stub
+		return studentDao.updateUser(sim);
+	}
+
 }

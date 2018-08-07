@@ -40,5 +40,11 @@ public class StudentController {
 			student.removeUser(id);
 			return "Deleted Successfully";
 }
+		@RequestMapping(value = "/user", method = RequestMethod.PUT)
+		public String updateUser(@RequestBody Student sim) {
+			System.out.println("Inside: Controller");
+			
+			return student.updateUser(sim);
+		}
 }
 

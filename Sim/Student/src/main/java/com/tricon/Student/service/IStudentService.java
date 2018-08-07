@@ -9,4 +9,6 @@ public interface IStudentService {
 	public Student  getUserbyId(int id);
 	Student addUser(Student sim);
 	public void removeUser(int sim);
+	
+	String updateUser(Student sim);
 }
