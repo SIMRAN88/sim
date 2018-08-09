@@ -9,11 +9,11 @@ public interface IStudentDao {
 
 	public Student getUserbyId(int id);
 
-	public Student addUser(Student sim);
+	public Student addUser(Student stud);
 	
-	public void removeUser(int sim);
+	public void removeUser(int stud);
 	
-	public String updateUser(Student sim);
+	public String updateUser(Student stud);
 
 	
 }

@@ -29,9 +29,9 @@ public class StudentController {
 			return student.getUserbyId(id);
 	}
 		@RequestMapping(value = "/user", method = RequestMethod.POST)
-		public Student addUser(@RequestBody Student sim) {
+		public Student addUser(@RequestBody Student stud) {
 			System.out.println("Inside: Controller");
-			return student.addUser(sim);
+			return student.addUser(stud);
 	
 }
 		@RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
@@ -41,10 +41,10 @@ public class StudentController {
 			return "Deleted Successfully";
 }
 		@RequestMapping(value = "/user", method = RequestMethod.PUT)
-		public String updateUser(@RequestBody Student sim) {
+		public String updateUser(@RequestBody Student stud) {
 			System.out.println("Inside: Controller");
 			
-			return student.updateUser(sim);
+			return student.updateUser(stud);
 		}
 }
 

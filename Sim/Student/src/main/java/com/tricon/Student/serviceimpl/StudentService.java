@@ -28,21 +28,21 @@ public class StudentService implements IStudentService {
 	}
 
 	@Override
-	public Student addUser(Student sim) {
+	public Student addUser(Student stud) {
 		// TODO Auto-generated method stub
-		return studentDao.addUser(sim);
+		return studentDao.addUser(stud);
 	}
 
 	@Override
-	public void removeUser(int sim) {
+	public void removeUser(int stud) {
 		// TODO Auto-generated method stub
-		studentDao.removeUser(sim);
+		studentDao.removeUser(stud);
 	}
 
 	@Override
-	public String updateUser(Student sim) {
+	public String updateUser(Student stud) {
 		// TODO Auto-generated method stub
-		return studentDao.updateUser(sim);
+		return studentDao.updateUser(stud);
 	}
 
 }

@@ -48,11 +48,11 @@ public class StudentDao implements IStudentDao {
 	}
 
 	@Override
-	public Student addUser(Student sim) {
+	public Student addUser(Student stud) {
 		// TODO Auto-generated method stub
-		this.jdbcTemplate.execute("insert into student (id, name, address) Values(' " + sim.getId() + "','"
-				+ sim.getName() + "','" + sim.getAddress() + "')");
-		return this.jdbcTemplate.queryForObject("select * from student where id =  " + sim.getId(),
+		this.jdbcTemplate.execute("insert into student (id, name, address) Values(' " + stud.getId() + "','"
+				+ stud.getName() + "','" + stud.getAddress() + "')");
+		return this.jdbcTemplate.queryForObject("select * from student where id =  " + stud.getId(),
 				new RowMapper<Student>() {
 					public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
 						Student s = new Student();
@@ -65,15 +65,15 @@ public class StudentDao implements IStudentDao {
 	}
 
 	@Override
-	public void removeUser(int sim) {
+	public void removeUser(int stud) {
 		// TODO Auto-generated method stub
-		this.jdbcTemplate.execute("DELETE FROM student WHERE id =  " + sim);
+		this.jdbcTemplate.execute("DELETE FROM student WHERE id =  " + stud);
 
 	}
 	@Override
-	public 	String updateUser(Student sim) {
+	public 	String updateUser(Student stud) {
 		
-		this.jdbcTemplate.execute("UPDATE `student`.`student` SET `name` = ' " + sim.getName() + "', `address` = ' " + sim.getAddress()+"' WHERE (`id` = '"+sim.getId()+ "')");
+		this.jdbcTemplate.execute("UPDATE `student`.`student` SET `name` = ' " + stud.getName() + "', `address` = ' " + stud.getAddress()+"' WHERE (`id` = '"+stud.getId()+ "')");
 		
 		return "Updated Successfully";
 	}
